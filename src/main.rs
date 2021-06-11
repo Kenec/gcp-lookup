@@ -25,8 +25,8 @@ pub enum CliCommand {
     #[structopt(name = "gke", about = "search for GKE cluster")]
     Gke(Query),
 
-    #[structopt(name = "gcs", about = "search for GCS bucket")]
-    Gcs(Query),
+    #[structopt(name = "image", about = "search for Container Images")]
+    Image(Query),
 }
 
 #[derive(Debug, StructOpt)]
