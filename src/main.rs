@@ -11,11 +11,11 @@ mod matcher;
 )]
 pub struct GcpLookup {
     #[structopt(subcommand)]
-    command: Command,
+    command: CliCommand,
 }
 
 #[derive(Debug, StructOpt)]
-pub enum Command {
+pub enum CliCommand {
     #[structopt(name = "project", about = "search for project")]
     Project(Query),
 
@@ -33,8 +33,6 @@ pub enum Command {
 pub struct Query {
     query: String,
 }
-
-
 
 fn main() {
     Builder::new().filter(None, LevelFilter::Info).init();
